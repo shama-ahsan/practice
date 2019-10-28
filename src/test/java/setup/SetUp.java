@@ -22,7 +22,9 @@ public class SetUp {
         System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver/chromedriver.exe");
         driver = new ChromeDriver();
        // driver.get("https://www.google.com/");
-        driver.get("http://10.3.18.70/Account/Login");
+        //driver.get("https://www.linkedin.com/");
+        driver.get("https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin");
+        driver.manage().window().maximize();
 
     }
 
@@ -30,7 +32,7 @@ public class SetUp {
 
     public void closeBrowser()
     {
-        driver.close();
+        //driver.close();
     }
 
 }

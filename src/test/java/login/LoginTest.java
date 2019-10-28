@@ -11,27 +11,48 @@ public class LoginTest extends SetUp {
 
     @Test
     public void loginTest() {
+
+        WebElement userName = driver.findElement(By.id("username"));
+        WebElement passWord = driver.findElement(By.id("password"));
+        WebElement signinBtn = driver.findElement(By.xpath("//*[@id=\"app__container\"]/main/div/form/div[3]/button"));
+
+        userName.sendKeys("shama.ahsan@gmail.com");
+        passWord.sendKeys("test1234");
+        signinBtn.submit();
+
+
+
+
+
+
+
         //System.setProperty("web driver.chrome.driver","src/main/resources/chromedriver/chromedriver.exe");
         //driver = new ChromeDriver();
        // driver.findElement(By.name("q")).clear();
        // driver.findElement(By.name("q")).sendKeys("test");
 
 
-         WebElement username = driver.findElement(By.id("username"));
-         WebElement password = driver.findElement(By.id("password"));
+         //WebElement signinBtn = driver.findElement(By.linkText("Sign in"));
+
+        // WebElement username = driver.findElement(By.id("username"));
+        // WebElement password = driver.findElement(By.id("password"));
          //WebElement button = driver.findElement(By.xpath("//input[@type ='submit']"0)).click();
                 // driver.findElement(By.name("shama")).clear();
 
 
                 //Enter Username
-                 driver.findElement(By.name("username")).sendKeys("raehsan");
+
+        //username.sendKeys("");
+        //password.sendKeys("Engro@1122");
+                // driver.findElement(By.name("username")).sendKeys("raehsan");
                  //Enter Password
-                 driver.findElement(By.name("password")).sendKeys("Engro@1122");
+                // driver.findElement(By.name("password")).sendKeys("Engro@1122");
                  //Wait for page to load
-                 driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+                // driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
                  // Click on Login button
-               WebElement button = driver.findElement(By.xpath("//input[@type ='submit']"'0')).click();
-                 driver.findElement(By.id("button")).click();
+               // driver.findElement(By.xpath("//input[@type ='submit']")).click();
+        //WebElement button = driver.findElement(By.xpath("//input[@type ='submit']")).click();
+                 //driver.findElement(By.id("button")).click();
 
                  //test comment selenium
 
