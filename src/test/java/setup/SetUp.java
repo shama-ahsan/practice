@@ -22,7 +22,7 @@ public class SetUp {
         System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver/chromedriver.exe");
         driver = new ChromeDriver();
        // driver.get("https://www.google.com/");
-        driver.get("https://www.linkedin.com/login");
+        driver.get("http://10.3.18.70/Account/Login");
 
     }
 
