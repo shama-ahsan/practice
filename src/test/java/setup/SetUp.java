@@ -23,7 +23,7 @@ public class SetUp {
         driver = new ChromeDriver();
        // driver.get("https://www.google.com/");
         //driver.get("https://www.linkedin.com/");
-        driver.get("https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin");
+        driver.get("https://www.readings.com.pk");
         driver.manage().window().maximize();
 
     }

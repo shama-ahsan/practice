@@ -12,13 +12,37 @@ public class LoginTest extends SetUp {
     @Test
     public void loginTest() {
 
-        WebElement userName = driver.findElement(By.id("username"));
-        WebElement passWord = driver.findElement(By.id("password"));
-        WebElement signinBtn = driver.findElement(By.xpath("//*[@id=\"app__container\"]/main/div/form/div[3]/button"));
+        //Sign Up
 
-        userName.sendKeys("shama.ahsan@gmail.com");
-        passWord.sendKeys("test1234");
-        signinBtn.submit();
+        WebElement Register = driver.findElement(By.xpath("/html/body/form/div[3]/div[1]/div[1]/div[2]/div[2]/ul/li[2]/a"));
+        Register.click();
+
+      WebElement username = driver.findElement(By.id("ContentPlaceHolder1_Nametxt"));
+      WebElement Contact = driver.findElement(By.id("ContentPlaceHolder1_Faxtxt"));
+      WebElement Email = driver.findElement(By.id("ContentPlaceHolder1_Emailtxt"));
+      WebElement Password = driver.findElement(By.id("ContentPlaceHolder1_txtPassword"));
+      WebElement Cpassword = driver.findElement(By.id("ContentPlaceHolder1_ConfirmPasswordtxt"));
+      WebElement ChkboxBtn = driver.findElement(By.id("ctl00$ContentPlaceHolder1$CheckBox2"));
+      WebElement RegisterBtn = driver.findElement(By.id("//*[@id=\"ContentPlaceHolder1_Register_btn\"]"));
+
+      username.sendKeys("Shama");
+      Contact.sendKeys("03455961283");
+      Email.sendKeys("shama.ahsan@gmail.com");
+      Password.sendKeys("Test1234");
+      Cpassword.sendKeys("Test1234");
+      ChkboxBtn.isSelected();
+      RegisterBtn.click();
+
+
+       // Login
+
+        //WebElement userName = driver.findElement(By.id("username"));
+       // WebElement passWord = driver.findElement(By.id("password"));
+       // WebElement signinBtn = driver.findElement(By.xpath("//*[@id=\"login-form\"]/div[2]/div/div[4]/div/input"));
+
+       //  userName.sendKeys("shama.ahsan@test.com");
+        // passWord.sendKeys("test1234");
+        // signinBtn.submit();
 
 
 
