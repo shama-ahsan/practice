@@ -23,7 +23,7 @@ public class SetUp {
         driver = new ChromeDriver();
        // driver.get("https://www.google.com/");
         //driver.get("https://www.linkedin.com/");
-        driver.get("https://www.readings.com.pk");
+        driver.get("https://twitter.com/i/flow/signup");
         driver.manage().window().maximize();
 
     }
@@ -32,7 +32,7 @@ public class SetUp {
 
     public void closeBrowser()
     {
-        driver.close();
+        //driver.close();
     }
 
 }
