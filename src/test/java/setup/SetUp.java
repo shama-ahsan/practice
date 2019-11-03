@@ -17,14 +17,15 @@ public class SetUp {
     }*/
 
     @BeforeTest
-    public void browserConfig(){
+    public void browserConfig() throws InterruptedException {
 
         System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver/chromedriver.exe");
         driver = new ChromeDriver();
        // driver.get("https://www.google.com/");
         //driver.get("https://www.linkedin.com/");
-        driver.get("https://twitter.com/i/flow/signup");
+        driver.get("https://www.readings.com.pk/");
         driver.manage().window().maximize();
+        Thread.sleep(5000);
 
     }
 

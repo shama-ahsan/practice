@@ -2,6 +2,7 @@ package login;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import setup.SetUp;
 
@@ -14,14 +15,21 @@ public class LoginTest extends SetUp {
 
 
        // Login
+        WebElement logBtn = driver.findElement(By.xpath("//*[@id=\"form1\"]/div[3]/div[1]/div[1]/div[2]/div[2]/ul/li[1]/a"));
+        logBtn.click();
 
-        //WebElement userName = driver.findElement(By.id("username"));
-       // WebElement passWord = driver.findElement(By.id("password"));
-       // WebElement signinBtn = driver.findElement(By.xpath("//*[@id=\"login-form\"]/div[2]/div/div[4]/div/input"));
 
-       //  userName.sendKeys("shama.ahsan@test.com");
-        // passWord.sendKeys("test1234");
-        // signinBtn.submit();
+        WebElement userName = driver.findElement(By.id("ContentPlaceHolder1_UserNameTxt"));
+        WebElement passWord = driver.findElement(By.id("ContentPlaceHolder1_Passwordtxt"));
+        WebElement loginBtn = driver.findElement(By.xpath("//*[@id=\"ContentPlaceHolder1_LinkButton1\"]"));
+
+       userName.sendKeys("shama ahsan");
+       passWord.sendKeys("Dexter1234");
+        loginBtn.submit();
+
+       // WebElement msg = driver.findElement(By.xpath("//*[@id=\"form1\"]/div[3]/div[1]/div[1]/div[2]/div[2]/ul/div/div/span"));
+        //msg.sendKeys("Welcome shama ahsan");
+
 
 
 
